@@ -1,54 +1,68 @@
-# Violence Detection using ResNet50 + BiLSTM
+# 🎯 Violence Detection using ResNet50 + BiLSTM
 
-This project aims to detect violent scenes in video clips using a deep learning model that combines ResNet50 for feature extraction and BiLSTM for temporal sequence analysis.
+This project detects violent scenes in video clips using a hybrid deep learning model that combines **ResNet50** for spatial feature extraction and **BiLSTM** for temporal sequence modeling.
 
-## Project Contents
+---
 
-- `ResNet50_BiLSTM_Training.ipynb`: Jupyter notebook for training the model
-- `violence_detection_app.py`: Script to run the trained model on new videos
-- `requirements.txt`: List of required Python libraries
-- `.gitignore`: Excludes unnecessary files (e.g., model weights, cache)
+## 📁 Project Structure
 
-## How to Use
+```
+Violence-Detection-ResNet50-BiLSTM/
+├── violence_detection_app.py           ← GUI application using Tkinter
+├── ResNet50_BiLSTM_Training.ipynb      ← Model training notebook
+├── requirements.txt                    ← Required libraries
+├── README.md
+├── .gitignore
+└── models/                             ← Place to store trained model file
+```
 
-1. Install dependencies:
+---
+
+## 🚀 How to Run
+
+1. **Install required libraries**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-2. Train the model (optional if model is already available):
+2. **Train the model (optional)**  
+   Open the notebook in Jupyter and run all cells to train the model:
+   ```
+   ResNet50_BiLSTM_Training.ipynb
+   ```
 
-   - Open `ResNet50_BiLSTM_Training.ipynb` in Jupyter Notebook
-   - Run all cells to train and save the model
-
-3. Run the detection app:
+3. **Run the detection application**
 
    ```bash
    python violence_detection_app.py
    ```
 
-   Make sure to set the correct path to the video inside the script before running.
+   You can analyze a video or use the live camera from the GUI.
 
-## Notes
+---
 
-- The `.pth` model file is **not included** in this repository
-- You can retrain the model using the provided notebook
-- Supported video formats include `.mp4`, `.avi`, etc.
+## 📦 Download Pretrained Model
 
-## Folder Structure
+You can download the pretrained model file (`ResNet50_BiLSTM_.pth`) from Google Drive:
 
-```
-Violence-Detection-ResNet50-BiLSTM/
-│
-├── README.md
-├── requirements.txt
-├── ResNet50_BiLSTM_Training.ipynb
-├── violence_detection_app.py
-├── .gitignore
-└── Violence-Detection-ResNet50-BiLSTM/   ← nested folder (currently unused)
-```
+👉 [Download Model from Google Drive](https://drive.google.com/uc?id=1Nj0vQhunydoMF-zIgAbggOsAoxZ_3HY0&export=download)
 
-## Author
+After downloading, place the `.pth` file in the `models/` directory and update the path in the script if needed.
 
-Developed by Abdullah as part of an academic project on detecting violence in video content.
+---
+
+## 📝 Notes
+
+- Only 16 frames are used per detection window
+- The model predicts the probability of violence in each segment
+- Detected frames are saved and visualized automatically
+- Requires a GPU for best performance, but also works on CPU
+
+---
+
+## 👨‍💻 Developer
+
+**Name**: ABDULLAH ALSAYED ALI  
+**Role**: Computer Engineering Student  
+**Project**: University Final Project for Real-time Violence Detection
