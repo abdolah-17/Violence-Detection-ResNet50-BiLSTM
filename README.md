@@ -1,73 +1,54 @@
 # Violence Detection using ResNet50 + BiLSTM
 
-This AI project detects violence in video streams using a hybrid deep learning model combining **ResNet50** and **BiLSTM**, with a simple Tkinter GUI for live interaction and visualization.
+This project aims to detect violent scenes in video clips using a deep learning model that combines ResNet50 for feature extraction and BiLSTM for temporal sequence analysis.
 
----
+## Project Contents
 
-## 📁 Project Structure
+- `ResNet50_BiLSTM_Training.ipynb`: Jupyter notebook for training the model
+- `violence_detection_app.py`: Script to run the trained model on new videos
+- `requirements.txt`: List of required Python libraries
+- `.gitignore`: Excludes unnecessary files (e.g., model weights, cache)
+
+## How to Use
+
+1. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Train the model (optional if model is already available):
+
+   - Open `ResNet50_BiLSTM_Training.ipynb` in Jupyter Notebook
+   - Run all cells to train and save the model
+
+3. Run the detection app:
+
+   ```bash
+   python violence_detection_app.py
+   ```
+
+   Make sure to set the correct path to the video inside the script before running.
+
+## Notes
+
+- The `.pth` model file is **not included** in this repository
+- You can retrain the model using the provided notebook
+- Supported video formats include `.mp4`, `.avi`, etc.
+
+## Folder Structure
 
 ```
 Violence-Detection-ResNet50-BiLSTM/
-├── app/
-│   └── violence_detection_app.py       ← GUI Application
-├── train/
-│   └── ResNet50_BiLSTM_Training.ipynb  ← Model Training Code
-├── models/
-│   └── ResNet50_BiLSTM_.pth            ← Pre-trained Model File (remove before GitHub push)
-├── assets/
-│   └── preview.png                     ← Screenshot of the GUI
-├── requirements.txt                    ← Project dependencies
+│
+├── README.md
+├── requirements.txt
+├── ResNet50_BiLSTM_Training.ipynb
+├── violence_detection_app.py
 ├── .gitignore
-└── README.md
+└── Violence-Detection-ResNet50-BiLSTM/   ← nested folder (currently unused)
 ```
 
----
+## Author
 
-## ✅ Features
-
-- Feature extraction with ResNet50
-- Temporal sequence modeling with BiLSTM
-- Real-time violence probability prediction
-- Automatically saves and displays detected frames
-- GUI built with Tkinter
-- Supports both video file and live camera input
-
----
-
-## 🚀 How to Run
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Launch the application
-python app/violence_detection_app.py
-```
-
----
-
-## 📦 Requirements
-
-```
-torch
-torchvision
-opencv-python
-pillow
-tk
-numpy
-```
-
----
-
-## 📸 GUI Preview
-
-
-
-
----
-
-## 👨‍💻 Developer
-
-**Name**: ABDULLAH ALSAYED ALI  
-**Role**: Computer Engineering Student  
-**Project Type**: Academic Final Project
+Developed by Abdullah as part of an academic project on detecting violence in video content.
