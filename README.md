@@ -63,14 +63,6 @@ numpy
 
 
 
----
-
-## ⚠️ Note
-
-The model file `ResNet50_BiLSTM_.pth` exceeds GitHub's file size limit.  
-You can download it from an external source:
-
-👉 [Download model from Google Drive](https://your-download-link.com)
 
 ---
 
